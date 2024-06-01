@@ -19,7 +19,7 @@ authController.loginWithEmail = async (req, res) => {
       throw new Error("Invalid email or password");
     }
   } catch (error) {
-    res.status(400).send({ error: error.message });
+    res.status(400).json({ error: error.message })
   }
 };
 
